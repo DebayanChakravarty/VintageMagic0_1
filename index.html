@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage Magic</title>
     <link rel="stylesheet" href="./index.css">
-    <script src="./script.js" defer></script>
+    <script src="./index.js?v=1.0.0" defer></script>
 </head>
 
 <body>
@@ -46,6 +46,17 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td colspan="3">
+                        <label for="subject-name">Subject:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="text" id="subject-name" placeholder="Your subject">
+                    </td>
+                </tr>
+
                 <!-- Message Section -->
                 <tr>
                     <td colspan="3">
@@ -57,13 +68,30 @@
                         <textarea id="message" placeholder="Type your message here..."></textarea>
                     </td>
                 </tr>
+                <tr>
+                    <td id="gen-message" colspan="3">
+                     ( click to create auto message )
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <span id="greetings-message"></span>
+                    </td>
+                </tr>
             </tbody>
         </table>
+      
 
         <!-- Image Roler Section -->
         <div id="image-roler">
             <!-- Images will be dynamically added here -->
         </div>
+
+        <table id="final-btn">
+            <tr>
+                <td><a href="./greetings.html">Create Greetings</a></td>
+            </tr>
+        </table>
     </div>
 </body>
 
