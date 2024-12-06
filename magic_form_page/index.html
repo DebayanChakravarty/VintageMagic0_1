@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Magic</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js?v=1.0.0" defer></script>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+      </div>
+      <div id="customAlert" class="alert-modal hidden">
+        <div class="alert-content">
+            <p id="alertMessage">This is your custom alert message!</p>
+            <button id="alertButton">OK</button>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id="backButton">
+            <img src="../assets/back.png" style="width: 25px;" >
+        </div>
+        <!-- Header Section -->
+        <table class="centered-table">
+            <thead>
+               <!-- From Section -->
+               <tr>
+                <td colspan="3">
+                    <label for="from-name">From:</label>
+                    <span class="error-message" id="from-error"></span>
+                    <span class="error-message" id="from-error-length"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="from-name" placeholder="Your name">
+                </td>
+            </tr>
+
+            <!-- To Section -->
+            <tr>
+                <td colspan="3">
+                    <label for="to-name">To:</label>
+                    <span class="error-message" id="to-error"></span>
+                    <span class="error-message" id="to-error-length"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="to-name" placeholder="Recipient's name">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <label for="to-subject">Subject:</label>
+                    <span class="error-message" id="subject-error"></span>
+                </td>
+            </tr>
+                <tr>
+                    <td colspan="3">
+                        <span id="subject-name"></span>
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td id="gen-message" colspan="3">
+                        ( click to create auto message )
+                    </td>
+                </tr> -->
+                <!-- <tr>
+                    <td id="gen-message" colspan="3">
+                     ( click to create auto message )
+                    </td>
+                </tr> -->
+                <!-- <tr>
+                    <td colspan="3">
+                        <input type="text" id="subject-name" placeholder="Your subject">
+                    </td>
+                </tr> -->
+
+             <!-- Message Section -->
+             <tr>
+                <td colspan="3">
+                    <label for="message">Message:</label>
+                    <span class="error-message" id="message-error"></span>
+                    <span class="character-count" id="message-count">0/350</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <textarea id="message" placeholder="Type your message here..."></textarea>
+                </td>
+            </tr>
+              
+               
+            </tbody>
+        </table>
+      
+
+        <!-- Image Roler Section -->
+        <div id="image-roler">
+            <!-- Images will be dynamically added here -->
+        </div>
+
+        <table id="final-btn">
+            <tr>
+                <td><button id="validateButton">Generate</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

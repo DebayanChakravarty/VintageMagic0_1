@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  background: #292931 url("../assets/image-01.webp") no-repeat center center fixed;
+  background-size: cover;
+  padding: 10px;
+  margin: 0;
+}
+
+
+/* Main Container Styling */
+#container {
+  background: rgba(7, 21, 111, 0.367); /* Dark transparent background */
+  box-shadow: 
+    0 0 10px 2px rgba(118, 122, 126, 0.8),
+    0 0 20px 4px rgba(0, 123, 255, 0.6),
+    0 0 30px 6px rgba(0, 123, 255, 0.4);
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Typography Styling */
+h1 {
+  font-family: "Macondo", cursive;
+  font-style: normal;
+}
+
+/* Table Styling */
+.centered-table {
+  width: 100%;
+}
+
+.centered-table td,
+.centered-table th {
+  color: white;
+}
+
+.centered-table td:nth-child(1) {
+  padding-left: 10px !important;
+}
+
+/* Label Styling */
+.centered-table label {
+  font-size: 1.1em;
+  color: white;
+  font-family: "Macondo", cursive;
+}
+
+/* Input and Textarea Styling */
+.centered-table input,
+.centered-table textarea {
+  padding: 10px;
+  background: transparent !important;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 92%;
+}
+
+.centered-table input::placeholder,
+.centered-table textarea::placeholder {
+  color: white;
+  font-family: "Macondo", cursive;
+}
+
+.centered-table input:focus,
+.centered-table textarea:focus {
+  outline: none;
+  border-color: #ffd700; /* Gold border on focus */
+}
+
+.centered-table textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Image Roler Styling */
+#image-roler {
+  height: 82px;
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: center;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+#image-roler::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Avatar Styling */
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#subject-name{
+  font-family: "Macondo", cursive;
+  font-style: normal;
+  
+
+  
+}
+
+#subject-name span{
+  background: rgba(3, 24, 110, 0.576); /* Dark transparent background */
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding:5px;
+  /* position: relative; */
+  /* top:10px; */
+  font-size: small;
+  cursor:pointer;
+ 
+}
+button{
+  background-color: rgba(233, 236, 239, 0.307);
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.0em;
+  font-family: Monospace;
+
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 5px;
+}
+
+.character-count {
+  font-size: 0.8rem;
+  color: rgb(245, 245, 245);
+  margin-top: 5px;
+}
+
+#backButton{
+  margin:10px;
+}
+
+#gen-message{
+  font-size: 12px;
+}
+#final-btn{
+  /* border:1px solid red; */
+  width:100%;
+}
+#final-btn td{
+  /* border:1px solid red; */
+  text-align: center;
+  padding:10px;
+  font-family: "Macondo", cursive;
+  font-style: normal;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor:pointer;
+
+}
+a {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit text color from the parent element */
+  font-family: inherit; /* Use the parent font */
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline; /* Add underline on hover or focus */
+  text-decoration-color: white; /* Set the underline color to white */
+}
+
+a:visited {
+  color: inherit; /* Ensure visited links don't change color */
+}
+
+/* Remove the blue tap highlight on touch screens */
+textarea,
+button,
+input {
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight on WebKit browsers */
+    outline: none; /* Removes focus outline */
+}
+
+/* Disable focus styling on elements */
+textarea:focus,
+button:focus,
+input:focus {
+    outline: none; /* Ensure no outline on focus */
+    box-shadow: none; /* Disable any box-shadow */
+}
+
+/* For iOS-specific behavior */
+textarea,
+button,
+input {
+    -webkit-appearance: none; /* Neutralizes iOS styles */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+ /* Fullscreen loading screen */
+ #loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 24, 24, 0.9);  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 30px;
+  line-height: 1.2em;
+  height:1.2em;
+  overflow: hidden;
+  color:white;
+}
+.loader:before {
+  content:"Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔"; 
+  white-space: pre;
+  display: inline-block;
+  animation: l39 1s infinite steps(11) alternate;
+}
+
+/* Alert Modal Container */
+.alert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Hide modal by default */
+.hidden {
+  display: none;
+}
+
+/* Alert Content Box */
+.alert-content {
+  background: rgba(1, 14, 29, 0.756); /* Transparent white background */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Alert Message */
+#alertMessage {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+  /* font-family: Arial, sans-serif; */
+  font-family: "Macondo", cursive;
+  font-style: normal;
+}
+
+/* Custom Button */
+#alertButton {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover and Active States */
+#alertButton:hover {
+  background-color: #f5b30b;
+}
+
+#alertButton:active {
+  background-color: #f36f17;
+}
+
+
+@keyframes l39 {
+  100%{transform: translateY(-100%)}
+}
+
+/* Touch-specific fixes */
+@media (hover: none) and (pointer: coarse) {
+    textarea,
+    span,
+    div,
+    table,
+    th,
+    td,
+    a,
+    button,
+    input {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
