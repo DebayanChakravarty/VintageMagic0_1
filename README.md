@@ -1,5 +1,7 @@
 # VintageMagic0_1
 Vintage Magic 0.1 
+# Check out the project
+https://vinmagic.bydeb.in/
 # Video Guide
 https://www.youtube.com/shorts/5tAoXpllvQo
 # Project Description
